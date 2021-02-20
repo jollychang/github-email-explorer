@@ -138,6 +138,7 @@ def request_user_email(user_id, github_api_auth):
     ge.g_id = rsp['login']
     ge.name = rsp['name'].strip() if rsp['name'] else rsp['login']
     ge.email = rsp['email']
+    ge.location = rsp['location']
     ge.from_profile = True
 
     # Get user email from events
